@@ -95,17 +95,17 @@ export default class Multic extends Component{
  swipeable
 >
 
-  <div className=" ml-3 mr-3">
+  <div className="ml-3 mr-3">
       <img src="http://unrealitymag.com/wp-content/uploads/2016/12/maxresdefault.jpg" className="img-fluid car-img" />
       <Example/>
   </div>
-  <div className=" ml-3 mr-3">
+  <div className="ml-3 mr-3">
   <img src="https://www.xtrafondos.com/wallpapers/cyberpunk-2077-3187.jpg" className="img-fluid car-img"/>
 
   <Example/>
 
   </div>
-  <div className=" ml-3 mr-3">
+  <div className="ml-3 mr-3">
   <img src="https://cdn.gearnuke.com/wp-content/uploads/2018/03/ni-no-kuni-2-revenant-kingdom-review-ps4-4.jpg" className="img-fluid car-img"/>
   <Example/>
   </div>

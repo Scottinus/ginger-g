@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import NavBar from "./Navbar"
 import Multic from "./bigCarousel"
 import News from "./News"
+import WeekSale from "./WeeklySale"
 
 export default class Main extends Component{
 
@@ -23,8 +24,14 @@ export default class Main extends Component{
             <div className="w-100 mb-5">
                 <Multic/>
             </div>
+            <hr/> 
+            <WeekSale/>
+            <hr/> 
+            <div className="mt-4">
             <h4>NEWS</h4>
             <News/>
+
+            </div>
             </>
         )
     }

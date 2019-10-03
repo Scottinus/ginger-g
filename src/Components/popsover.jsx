@@ -23,7 +23,7 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                   <button onClick={this.hoverBtn} id="fade-btn">Browse</button>
+                   <button className="btn btn-green" onClick={this.hoverBtn} id="fade-btn">Browse</button>
                 <Fade className={this.state.hover ? "animated fadeInUp cust-fade mr-3 ml-3" : "animated fadeOutDown faster cust-fade"}
                 onMouseEnter={this.hoverOn}
                  onMouseLeave={this.hoverOff} 
