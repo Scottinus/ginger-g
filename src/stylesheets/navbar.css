@@ -1,0 +1,26 @@
+#custom-nav{
+    background-color: #000000d5;
+    height:3rem;
+    padding-left: 10rem;
+    padding-right:10rem;
+}
+.navbar-brand{
+  position:fixed;
+  height:165px;
+}
+
+.navbar-collapse{
+  margin-left:3rem;
+}
+.navbar-expand-md .navbar-nav .nav-link{
+    color:#eee;
+    font-weight: 600;
+    padding:1rem;
+}
+.bannerFlag{
+    filter: brightness(90%);
+
+  }
+  .bannerFlag:hover{
+    filter: brightness(100%)
+  }

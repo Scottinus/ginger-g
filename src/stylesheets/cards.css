@@ -1,0 +1,31 @@
+.card-col{
+    margin-top:1rem;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.322);
+
+  }
+  
+  .card-price{
+    background-color: rgb(63, 143, 63);
+    border-radius:5px;
+    color:white;
+   
+  }
+  .card-text .card-price{
+    font-size:18px;
+    font-weight: 500
+  }
+  .card-text p{
+    font-size:15px;
+    font-weight: 400
+  }
+  .card-text img{
+    opacity: 0.2
+  }
+  
