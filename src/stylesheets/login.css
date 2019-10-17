@@ -1,0 +1,39 @@
+.custom-gradient{
+    background: rgb(25,79,49);
+    background: linear-gradient(90deg, #388e3c 0%, #84d488 100%);
+}
+
+.login-container{
+    max-width:600px;
+    margin-top:6rem;
+    margin-left: auto;
+    margin-right: auto;
+    color:black;
+}
+
+.login-container a{
+    color:rgb(67, 173, 67);
+}
+
+.image-r{
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+.image-r img{
+    -webkit-filter: grayscale(80%); /* Safari */
+  filter: grayscale(80%);
+    max-width:550px
+}
+.image-l{
+    position: absolute;
+    bottom:0;
+    right:78%;
+   
+}
+
+.image-l img{
+    -webkit-filter: grayscale(80%); /* Safari */
+  filter: grayscale(80%);
+    max-width:420px
+}

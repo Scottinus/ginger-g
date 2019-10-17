@@ -8,6 +8,9 @@
   position:fixed;
   height:165px;
 }
+.navbar-toggler{
+  margin-left:25rem;
+}
 
 .navbar-collapse{
   margin-left:3rem;
@@ -24,3 +27,11 @@
   .bannerFlag:hover{
     filter: brightness(100%)
   }
+
+  .navbar .dropdown-menu {
+    border:1px solid #000000d5;
+    border-radius: 0px 0px 4px 4px;
+    margin-top: 0;
+    left: 55%;
+    top: 91%;
+}

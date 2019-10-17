@@ -1,0 +1,13 @@
+/*GLIBRARY INFO*/
+.card-image{
+    overflow: hidden;
+    background-image: url("https://ak9.picdn.net/shutterstock/videos/18681329/thumb/1.jpg")
+  }
+  
+  .btn-green{
+    opacity:0.8;
+  }
+  .btn-green:hover{
+  opacity: 1;
+  }
+  

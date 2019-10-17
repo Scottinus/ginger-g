@@ -13,6 +13,9 @@ import {
   DropdownItem } from 'reactstrap';
 import banner from "./bannerFlag.png"
 import "../stylesheets/navbar.css";
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -20,7 +23,8 @@ export default class NavBar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      logged: true
     };
   }
   toggle() {
@@ -30,6 +34,8 @@ export default class NavBar extends React.Component {
   }
   render() {
     return (
+      <Router>
+
       <div>
         <Navbar id="custom-nav" className="fixed-top" expand="md">
           <NavbarBrand href="/">
@@ -38,41 +44,70 @@ export default class NavBar extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-5" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  STORE
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu right className="animated fadeIn faster">
                   <DropdownItem>
-                    Option 1
+                    Action
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    Adventure
                   </DropdownItem>
-                  <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    RPG
+                  </DropdownItem>
+                  <DropdownItem>
+                    Strategy
+                  </DropdownItem>
+                  <DropdownItem>
+                    Indie
+                  </DropdownItem>
+                  <DropdownItem>
+                    Simulation
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  SUPPORT
+                </DropdownToggle>
+                <DropdownMenu right className="animated fadeIn faster">
+                  <DropdownItem>
+                    Game Issues
+                  </DropdownItem>
+                  <DropdownItem>
+                    Payments - Orders
+                  </DropdownItem>
+                  <DropdownItem>
+                    Account
+                  </DropdownItem>
+                  <DropdownItem>
+                   Downloads
+                  </DropdownItem>
+                  <DropdownItem>
+                    Other
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              </NavItem>
             </Nav>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Log-in/SignUp</NavLink>
+                <NavLink href="login">Log-in/SignUp</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Cart</NavLink>
+                {this.state.logged ?   <NavLink href="https://github.com/reactstrap/reactstrap">Cart</NavLink> : ""}
+              
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
       </div>
+      </Router>
     );
   }
 }

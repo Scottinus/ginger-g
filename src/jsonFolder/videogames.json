@@ -1,0 +1,55 @@
+{
+   "news":[
+
+       {
+     "src": "http://unrealitymag.com/wp-content/uploads/2016/12/maxresdefault.jpg",
+     "price": "14.99$",
+     "title": "The Witcher 3: Wild Hunt - Game of the Year Edition",
+     "genre": "RPG",
+     "platform": ["Playstation 4, Nintendo Switch, Microsoft Windows, Xbox One"],
+     "description": "The Witcher 3: Wild Hunt ends the story of the witcher Geralt of Rivia, the protagonist of the series. Continuing on from The Witcher 2: Assassins of Kings, Geralt has finally recovered his memory and embarks on a new and personal mission in search of Ciri, a girl he considers as a daughter and has no news for some time, while the order of the world is coming to a change.",
+     "key": 1
+   },
+   {
+     "src": "https://www.cyberpunk.net/build/images/social-thumbnail-en-ab9301da.jpg",
+     "price": "69.99$",
+     "title": "CYBERPUNK 2077",
+     "genre": "RPG",
+     "platform": [
+       "Microsoft Windows",
+       "PlayStation 4",
+       "Xbox One",
+       "Google Stadia"
+     ],
+     "descrption": "In 2077 the world reached the technological singularity, the population is divided into social classes and the United States of America fell victim to bankruptcy and Balkanisation after losing control of an internal war and having suffered kinetic bombing, attacks, famines and bloody rebellions. The Mega-corporations have taken control of the country, constituting enclaves where only their employees are allowed to live. Outside these territories there are city ruins where the gangs and the government compete for the dominion of the territory, while the center of the country is devastated by violent sand storms, where only nomads dare to travel. In the orbital space the elite of the Orbitals is in force, a group ruled by the Eurozone, which threatens to bomb anyone who tries to destabilize their world sovereignty from above.",
+     "key": 2
+   },
+   {
+     "src": "",
+     "price": "49.90$",
+     "title": "NI NO KUNI 2",
+     "genre": "RPG",
+     "platform": ["Microsoft Windows", "PlayStation 4"],
+     "description": "The story of Ni no kuni II begins hundreds of years after the events experienced in Ni no kuni: The threat of the Cinerea Witch. Despite being set in the same world, it is not necessary to have played the first chapter in order to understand the history of the sequel. However, within the game there are some references that can be understood only by those who have also completed the first title of the saga",
+     "key": 3
+   },
+   {
+     "src": "",
+     "price": "69.90$",
+     "title": "BORDERLANDS 3",
+     "genre": "RPG",
+     "platform": ["Microsoft Windows", "PlayStation 4", "Xbox One"],
+     "description": "Years after the defeat of Jack the Fair and the destruction of the Hyperion Corporation, a pair of twins called Tyreen and Troy form a sect called The Children of the Crypt with the intention of finding the map where it indicates the position of all the Crypts of the Galaxy so that they can seize their powers.",
+     "key": 4
+   },
+   {
+     "src": "",
+     "price": "69.90$",
+     "title": "Death Stranding",
+     "genre": "Action",
+     "platform": ["PlayStation 4"],
+     "description": "the title of the game refers to the phenomenon of cetacean stranding, and according to Kojima, one of the key aspects of the announcement trailer is the idea of ​​a connection between life and death. Hideo Kojima has admitted that Death Stranding can be considered an action video game, even if it fails to slip into correctly established fees",
+     "key": 5
+   }
+   ] 
+}

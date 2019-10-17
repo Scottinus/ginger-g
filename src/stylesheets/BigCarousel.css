@@ -1,0 +1,46 @@
+/*CAROUSEL PART*/
+.carousel{
+    width:100%;
+  }
+  
+  .browse-text{
+    height:auto;
+    position: absolute;
+    transform-origin: center;
+    transform: translate(50%,50%);
+  right: 15%;
+  bottom: 10%;
+  color: #fff;
+  padding:3rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(72,111,70);
+  background: linear-gradient(0deg, rgba(62, 122, 59, 0.5) 0%, rgba(31,187,33,0.5) 44%, rgba(0,255,46,0.5) 100%);
+  border-radius:5px;
+  border:0px;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.37), 0 0 40px rgba(0, 0, 0, 0.322) inset, 0 1px 4px rgba(0, 0, 0, 0.164), 0 1px 4px rgba(0, 0, 0, 0.164);
+  
+  }
+  
+  .react-multi-carousel-item{
+    opacity: 0.4;
+    transition: opacity 1s;
+   
+  }
+  .react-multi-carousel-item--active {
+    opacity: 1;
+    transition: opacity 1s;
+   }
+   
+   .car-img{
+     width:100%;
+    max-height: 400px; 
+     border-radius:4px;
+     opacity:0.8;
+     transition: opacity 1s;
+     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.322);
+   }
+   .car-img:hover{
+     opacity:1;
+   }
+   

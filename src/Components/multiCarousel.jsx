@@ -2,6 +2,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
  import React, {Component} from 'react';
  import images from '../jsonFolder/multiCar.json'
+ import {connect} from "react-redux"
+ 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -20,31 +22,25 @@ const responsive = {
   },
 };
 
-export default class Multicar extends Component{
+const mapStateToProps = reduxStore => {
+  console.log(reduxStore)
+  return reduxStore;
+};
+
+class Multicar extends Component{
     constructor(props){
         super(props);
         this.state={
             imgArray: [],
-            objimg:[]
         }
     }
-    componentDidMount= async() =>{
-        console.log(this.props.id)
-        await this.setState({imgArray : images})
-        await this.setState({imgArray : this.state.imgArray[0]})
-        await console.log(this.state.imgArray)
-        switch(this.props.id){
-            case 1:     this.setState({imgArray : this.state.imgArray.first})
-            console.log(this.state.imgArray)
-            break;
-            case 2:     this.setState({imgArray : this.state.imgArray.second})
-            console.log(this.state.imgArray)
-            break;
-            case 3:  this.setState({imgArray : this.state.imgArray.third})
-            console.log(this.state.imgArray) 
-        }
-    
-}
+
+    componentDidMount= () =>{
+
+      this.setState({imgArray: this.props.gameList.filter(filter => filter._id === this.props.id)})
+
+    }
+
     render(){
         return(
 
@@ -55,11 +51,9 @@ export default class Multicar extends Component{
   responsive={responsive}
   ssr={true} // means to render carousel on server-side.
   infinite={true}
-  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-  autoPlaySpeed={1000}
+  autoPlay={false}
   keyBoardControl={true}
   customTransition="all .5"
-  transitionDuration={500}
   containerClass="carousel-container"
   removeArrowOnDeviceType={["tablet", "mobile"]}
   deviceType={this.props.deviceType}
@@ -67,16 +61,18 @@ export default class Multicar extends Component{
   itemClass="carousel-item-padding-40-px"
   id={this.props.id}
 >
-  <div>
-      <img src={this.state.imgArray[0]} className="img-fluid" width="300px"/>
+  {this.props.imgArray.map((games, index) =>{
+    return(
+  <div key={index}>
+      <img src={games} className="img-fluid detailSrc"/>
   </div>
-  <div>
-      <img src={this.state.imgArray[1]} className="img-fluid" width="300px"/>
-  </div>
-  <div>
-      <img src={this.state.imgArray[2]} className="img-fluid" width="300px"/>
-  </div>
+    )
+  })}
 </Carousel>
         )
     }
 }
+
+export default connect(
+  mapStateToProps
+)(Multicar);

@@ -1,8 +1,11 @@
 import React from 'react';
-import { Button, Fade } from 'reactstrap';
+import { Fade } from 'reactstrap';
 import Multicar from './multiCarousel';
+import "../stylesheets/Popsover.css"
 
-export default class Example extends React.Component {
+
+
+export default class PopsOver extends React.Component {
     constructor(props){
         super(props);
         this.state={
@@ -11,7 +14,7 @@ export default class Example extends React.Component {
     }
 
     hoverBtn=() =>{
-          if(this.state.hover == false){
+          if(this.state.hover === false){
       this.setState({hover: true})
     }else {
       this.setState({hover: false})
@@ -23,23 +26,27 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                   <button className="btn btn-green" onClick={this.hoverBtn} id="fade-btn">Browse</button>
-                <Fade className={this.state.hover ? "animated fadeInUp cust-fade mr-3 ml-3" : "animated fadeOutDown faster cust-fade"}
+                   <button className={this.state.hover==true ? "btn d-none" : "d-block btn"} onClick={this.hoverBtn} id="fade-btn">Browse</button>
+                <Fade className={this.state.hover ? "animated fadeInUp cust-fade mr-2"  : "animated fadeOutDown faster cust-fade"}
                 onMouseEnter={this.hoverOn}
                  onMouseLeave={this.hoverOff} 
                  id={this.props.id}
+                 imgArray={this.props.imgArray}
                 >
-                    <div className= "fade-item container-fluid mt-5" >
+                    <div className= "fade-item container-fluid" >
                         <div className="row">
-                            <div className="col">
+                            <div className="col text-center">
                              <h2>{this.props.title}
                             </h2>
-                             <Multicar id={this.props.id}/>
-                             <h4>Description:</h4>
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, dolor iste exercitationem aut vero fuga.</p>
+                             <Multicar id={this.props.id}
+                                        imgArray={this.props.imgArray}
+                             />
+                             <p className="text-left mt-3">{this.props.description} ...</p>
                             </div>
                         </div>
-
+                        <div className="text-center">
+                <button className="btn btn-green">Add to Cart</button>
+                        </div>
                     </div>
                 </Fade>
             </div>
